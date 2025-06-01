@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositorio de Herramientas de IA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Herramientas de IA Disponibles en Internet</h1>
+        <p>Un repositorio curado de herramientas de Inteligencia Artificial para diversas necesidades.</p>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <h2>Filtros</h2>
+            <div class="filter-group">
+                <h3>Tipo de Pago</h3>
+                <label><input type="checkbox" class="filter-checkbox" data-filter-type="pago" value="gratuita"> Gratuita</label>
+                <label><input type="checkbox" class="filter-checkbox" data-filter-type="pago" value="pago"> De Pago</label>
+                <label><input type="checkbox" class="filter-checkbox" data-filter-type="pago" value="freemium"> Freemium</label>
+            </div>
+            <div class="filter-group">
+                <h3>Categoría</h3>
+                <label><input type="checkbox" class="filter-checkbox" data-filter-type="categoria" value="audio"> Audio</label>
+                <label><input type="checkbox" class="filter-checkbox" data-filter-type="categoria" value="video"> Video</label>
+                <label><input type="checkbox" class="filter-checkbox" data-filter-type="categoria" value="fotos"> Fotos</label>
+                <label><input type="checkbox" class="filter-checkbox" data-filter-type="categoria" value="texto"> Texto</label>
+                <label><input type="checkbox" class="filter-checkbox" data-filter-type="categoria" value="general"> General</label>
+            </div>
+            <button id="clear-filters">Limpiar Filtros</button>
+        </aside>
+
+        <section class="tools-container">
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Repositorio de Herramientas de IA. Creado para la comunidad.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
