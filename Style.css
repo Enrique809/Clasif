@@ -1,0 +1,197 @@
+:root {
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #333;
+    --text-color: #555;
+    --bg-color: #f4f4f4;
+    --card-bg-color: #ffffff;
+    --border-color: #ddd;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 1rem;
+    gap: 20px; /* Espacio entre los elementos de la cuadrícula */
+}
+
+.sidebar {
+    flex: 0 0 250px; /* Ancho fijo para la barra lateral */
+    background-color: var(--card-bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    align-self: flex-start; /* Mantiene la barra lateral en la parte superior */
+}
+
+.sidebar h2 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.filter-group {
+    margin-bottom: 1.5rem;
+}
+
+.filter-group h3 {
+    color: var(--text-color);
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.filter-group input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: var(--primary-color); /* Color del checkbox */
+}
+
+#clear-filters {
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#clear-filters:hover {
+    background-color: #d32f2f;
+}
+
+.tools-container {
+    flex: 1; /* Ocupa el espacio restante */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Columnas responsivas */
+    gap: 20px;
+}
+
+.tool-card {
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.tool-card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.6rem;
+}
+
+.tool-card p {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Permite que la descripción ocupe el espacio disponible */
+}
+
+.tool-card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.tool-card .tag {
+    background-color: #e0e0e0;
+    color: #555;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap; /* Evita que los tags se rompan en varias líneas */
+}
+
+.tool-card a {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+}
+
+.tool-card a:hover {
+    background-color: #43a047;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 30px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+        padding: 0 15px;
+    }
+
+    .sidebar {
+        flex: none; /* Elimina el ancho fijo */
+        width: 100%; /* Ocupa todo el ancho */
+        margin-bottom: 20px;
+    }
+
+    .tools-container {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
